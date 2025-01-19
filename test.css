@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+    position: fixed; /* Fixe le header en haut de la page */
+    top: 0; /* Aligne le header avec le haut de la page */
+    left: 0; /* Le header commence sur la gauche */
+    width: 100%; /* Le header occupe toute la largeur de l'écran */
+    z-index: 1000; /* Assure que le header reste au-dessus des autres éléments */
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+}
+
+.head{
+    display: flex;
+    gap: 33%;
+    width: 100%;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.liens {
+  display: flex;
+  gap: 10%;
+}
+
+.liens a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.Ouverture {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.Ouverture span {
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.loupe {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.annonce {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 14px;
+}

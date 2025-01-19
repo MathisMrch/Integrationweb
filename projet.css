@@ -1,0 +1,19 @@
+header{
+    background-color: white;
+    color: white;
+    text-align: center;
+}
+
+header h1{
+    font-size: 2em;
+    color: black;
+    font: normal normal normal 78px/93px Helvetica Neue;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    text-align: left; 
+}
+
+.p2Header{
+
+}
