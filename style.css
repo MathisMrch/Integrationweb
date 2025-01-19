@@ -1,3 +1,70 @@
-h2{
-    font-size: 2rem;
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Judson:wght@700&display=swap');
+
+*{
+    margin: 0;
+    background-color: red;
+}
+
+.actustxt{
+    font-family: Albert Sans;
+    /* UI Properties */
+    text-align: left;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    font-size: 70px;
+}
+
+.bonsplanstxt{
+    font-family: Albert Sans;
+    /* UI Properties */
+    text-align: left;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    font-size: 70px;
+    margin-left: 10%;
+    color: transparent;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: white;
+}
+
+.barre{
+    width: 100%;
+    border: none;
+    height: 5%;
+    background-color: grey;
+}
+
+.fleche{
+    width: 30%;
+}
+
+.barrecaroussel{
+    grid-area: b;
+    margin-top: 20%;
+    display: grid;
+    grid-template-columns: 1fr 7fr 1fr;
+}
+
+.texteactetb{
+    grid-area: a;
+}
+
+.boutonaetb{
+    grid-area: b;
+}
+
+.boutonaetb p {
+    font-family: Albert Sans;
+    font-style: bold;
+    color: black;
+    
+}
+
+.grille{
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: 1fr 2fr ;
+    grid-template-areas: "a b";
 }
