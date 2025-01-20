@@ -1,19 +1,167 @@
-header{
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: white;
+    border-bottom: 1px solid #ddd;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.premiereBarre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px; /* Réduit l'espace pour rapprocher le logo de la gauche */
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    flex: 0.25 1 auto;
+    text-align: left; /* S'assure que le logo est bien aligné à gauche */
+}
+
+.menu {
+    display: flex;
+    gap: 15px; /* Réduit l'espace entre les éléments du menu */
+    flex: 1 1 auto; /* Rend le menu plus flexible */
+    justify-content: flex-start; /* Rapproche les textes du logo */
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1 1 auto;
+    justify-content: flex-end;
+}
+
+.status span {
+    background-color: #fff127; /* Orange plus foncé */
+    padding: 5px 10px;
+    border-radius: 10px; /* Arrondi des bords */
+    font-weight: bold;
+}
+
+.annonce {
+    background-color: black;
     color: white;
     text-align: center;
+    padding: 10px;
+    font-size: 14px;
 }
 
-header h1{
-    font-size: 2em;
-    color: black;
-    font: normal normal normal 78px/93px Helvetica Neue;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 1;
-    text-align: left; 
+main {
+    padding-top: 140px; /* Pour éviter de chevaucher l'en-tête */
 }
 
-.p2Header{
+/* Responsive styles */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .status {
+        justify-content: flex-start;
+        margin-top: 10px;
+    }
+
+    .status span {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .status span {
+        font-size: 12px;
+    }
+
+    .announcement {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+.boiteLoupe {
+    display: flex;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    padding: 5px 15px;
+    background-color: #fff;
+    width: 50px;  /* Réduit la taille avant le clic */
+    transition: width 0.4s ease-in-out; /* Transition pour agrandir la barre de recherche */
+}
+
+.cliqueLoupe {
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    width: 0;  /* Cache la barre de recherche au début */
+    transition: width 0.4s ease-in-out; /* Animation pour agrandir la barre de recherche */
+}
+
+.rechercheBouton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.rechercheIcone {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.4s ease-in-out; /* Animation pour déplacer la loupe */
+}
+
+.boiteLoupe.open {
+    width: 300px;  /* Taille de la barre de recherche après ouverture */
+}
+
+.boiteLoupe.open .cliqueLoupe {
+    width: 200px;  /* Taille de la barre de recherche */
+}
+
+.boiteLoupe.open .rechercheIcone {
+    transform: translateX(150px);  /* Déplace la loupe vers la droite */
 }

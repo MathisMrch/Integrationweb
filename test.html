@@ -4,25 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>maquette</title>
-    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="projet.css">
     
 </head>
 <body>
     <header>
-        <div class="head"><div class="titre"><h1>LOGO</h1></div> 
-            <nav class="liens">
+        <div class="premiereBarre">
+            <div class="logo">LOGO</div>
+            <nav class="menu">
                 <a href="#">Boutiques & Restaurants</a>
                 <a href="#">Actus & Bons plans</a>
                 <a href="#">Infos pratiques</a>
             </nav>
-            <div class="Ouverture">
-                <span>OUVERT – 9:30 à 19:30</span>
-                <div class="loupe"></div>
+            <div class="status">
+                <span>OUVERT - 9:30 à 19:30</span>
+                <div class="boiteLoupe">
+                    <input type="text" class="cliqueLoupe" placeholder="Rechercher..." id="boiteRecherche" />
+                    <button class="rechercheBouton" id="rechercheBtn">
+                        <img src="/Images/Icon feather-search.svg" alt="Loupe" class="rechercheIcone">
+                    </button>
+                </div>
             </div>
         </div>
         <div class="annonce">
             Ouverture exceptionnelle le dimanche 12 février pour la Saint-Valentin
         </div>
+        
     </header>
     
     <div id="Carroussel">
@@ -100,6 +107,8 @@
     <br>
     <br>
     <br>
+
+    <script src="header.js"></script>
     
 </body>
 </html>
