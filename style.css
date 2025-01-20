@@ -25,19 +25,30 @@
     font-size: 70px;
     margin-left: 10%;
     color: transparent;
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 3px; /*faire les contour*/
+    -webkit-text-stroke-color: white;/*couleur des contours*/
 }
 
 .barre{
     width: 100%;
     border: none;
-    height: 5%;
+    height: 5px;
     background-color: grey;
+    margin-top: 10px;
+    border-radius: 2px;
+    position: absolute;
 }
 
-.fleche{
+.flecheg{
     width: 30%;
+    margin-left: 50%;
+    margin-right: 50%;
+}
+
+.fleched {
+    width: 30%;
+    margin-left: 20%;
+    margin-right: 50%;
 }
 
 .barrecaroussel{
@@ -45,21 +56,55 @@
     margin-top: 20%;
     display: grid;
     grid-template-columns: 1fr 7fr 1fr;
+    width: 85%;
 }
 
 .texteactetb{
     grid-area: a;
+    margin-top: 80px;
 }
 
 .boutonaetb{
     grid-area: b;
+    text-align: end;
+    width: 80%;
+    margin-top: 10%;
 }
 
-.boutonaetb p {
-    font-family: Albert Sans;
-    font-style: bold;
-    color: black;
-    
+.boutonaetbp {
+    font-family: Albert Sans, bold;
+    font-weight: 700;
+    color: red;
+    background-color: #FFFFFF;
+    padding: 10px;
+    display: inline;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.boutonaetbp:hover{
+    padding: 15px;
+    margin-right: 0;
+    transition: 0.05s ease-in-out;
+}
+
+.lesbarres {
+    position: relative; /* Nécessaire pour le positionnement absolu des enfants */
+    width: 100%; /* Ajuste la largeur du conteneur */
+    height: 5px; /* Définit une hauteur pour le conteneur */
+}
+
+.barreblanche {
+    width: 0%;
+    border: none;
+    height: 5px;
+    background-color: #FFFFFF;
+    border-radius: 2px;
+    position: absolute;
+    z-index: 1;
+    margin-top: 10px;
+    transition: width 0.3s ease;
 }
 
 .grille{
@@ -67,4 +112,31 @@
     display: grid;
     grid-template-columns: 1fr 2fr ;
     grid-template-areas: "a b";
+}
+
+.listeimage{
+    margin-top: 70px;
+    text-align: center;
+    display: flex;
+    float: left;
+    position: relative;
+    left: 0px;
+    flex-direction: row;
+    list-style-type: none;
+    transition: 0.5s;
+    gap: 30px;
+    transition: 0.5s;
+    left: -430px;
+}
+
+.listeimage li {
+}
+
+.divlisteimage {
+    overflow: hidden;
+    position: relative;
+}
+
+.listeimage li img {
+    width: 400px;
 }
