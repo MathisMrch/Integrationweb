@@ -2,7 +2,11 @@
 
 *{
     margin: 0;
+}
+
+body{
     background-color: red;
+
 }
 
 .actustxt{
@@ -130,13 +134,127 @@
 }
 
 .listeimage li {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
 }
 
 .divlisteimage {
     overflow: hidden;
-    position: relative;
 }
 
 .listeimage li img {
     width: 400px;
+    display: block;
+}
+
+.txtimageaetb {
+    position: absolute; /* Permet de superposer le texte */
+    text-align: left;
+    bottom: 70px;
+    color: white; /* Couleur du texte pour contraste */
+    font-family: Albert Sans, sans-serif;
+    left: 25px;
+}
+
+.dateaetb{
+    margin-bottom: 20px;
+}
+
+.txtimageaetb h3{
+    font-size: 2rem;
+}
+
+.hashtagaetb{
+    margin-top: 50px;
+    font-family: Albert Sans, sans-serif;
+    font-weight: bold;
+}
+
+.particulieretxt {
+    font-family: Albert Sans;
+    /* UI Properties */
+    text-align: left;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    font-size: 70px;
+    color: transparent;
+    -webkit-text-stroke-width: 3px; /*faire les contour*/
+    -webkit-text-stroke-color: white;/*couleur des contours*/
+}
+
+.enviedeshopping {
+    margin-left: 80px;
+}
+
+.boutonshop {
+    font-family: Albert Sans, bold;
+    font-weight: 700;
+    color: red;
+    background-color: #FFFFFF;
+    padding: 10px;
+    display: inline;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.boutonshop:hover{
+    padding: 15px;
+    transition: 0.05s ease-in-out;
+    margin-left: 0;
+}
+
+.divboutonshop {
+    margin-top: 80px;
+}
+
+.grilleshop {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.listeshop{
+    margin-top: 70px;
+    text-align: center;
+    display: flex;
+    float: left;
+    position: relative;
+    left: 0px;
+    flex-direction: row;
+    list-style-type: none;
+    transition: 0.5s;
+    gap: 56px;
+    margin-left: 160px;
+    padding-top: 20px;
+}
+
+.eltshop{
+    width: 211px;
+    height: 211px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 5px solid #FFFFFF;
+    border-radius: 20px;
+    display: grid;
+    grid-template-rows: 5fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.listeshop li p{
+    bottom: 70px;
+    color: white; /* Couleur du texte pour contraste */
+    font-family: Albert Sans, sans-serif;
+    font-weight: bold;
+}
+
+.listeshop li img{
+    width:106px ;
+}
+
+.eltshop:hover{
+    background-color: red;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-20px);
 }

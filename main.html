@@ -7,41 +7,63 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="grille">
-        <div class="texteactetb"> <!--div Actus & bons plans texte-->
-            <h2 class="actustxt">Actus & </h2><h2 class="bonsplanstxt">bons plans</h2>
-        </div>
-        <div class="boutonaetb">
-            <p class="boutonaetbp">Toutes les actus & bons plan & bons plans</p>
-        </div>
-        <div class="barrecaroussel"><!--div pour les fleche et les barres-->
-            <svg class="flecheg" onclick="moveleft()" xmlns="http://www.w3.org/2000/svg" width="23.53" height="22.934" viewBox="0 0 23.53 22.934">
-                <path id="Icon_awesome-arrow-left" data-name="Icon awesome-arrow-left" d="M13.522,24.045l-1.166,1.166a1.255,1.255,0,0,1-1.78,0L.367,15.007a1.255,1.255,0,0,1,0-1.78L10.576,3.018a1.255,1.255,0,0,1,1.78,0l1.166,1.166a1.262,1.262,0,0,1-.021,1.8L7.173,12.013H22.266a1.257,1.257,0,0,1,1.26,1.26v1.681a1.257,1.257,0,0,1-1.26,1.26H7.173L13.5,22.243A1.253,1.253,0,0,1,13.522,24.045Z" transform="translate(0.004 -2.647)" fill="#fff" opacity="0.7"/>
-            </svg>
-            <div class="lesbarres">
-                <hr class="barre">
-                <hr class="barreblanche" id="barreblancheid">
+    <div class="actusetbonsplan">
+        <div class="grille">
+            <div class="texteactetb"> <!--div Actus & bons plans texte-->
+                <h2 class="actustxt">Actus & </h2><h2 class="bonsplanstxt">bons plans</h2>
             </div>
-            <svg class="fleched" onclick="moveright()" xmlns="http://www.w3.org/2000/svg" width="23.53" height="22.934" viewBox="0 0 23.53 22.934">
-                <path id="Icon_awesome-arrow-left" data-name="Icon awesome-arrow-left" d="M13.522,24.045l-1.166,1.166a1.255,1.255,0,0,1-1.78,0L.367,15.007a1.255,1.255,0,0,1,0-1.78L10.576,3.018a1.255,1.255,0,0,1,1.78,0l1.166,1.166a1.262,1.262,0,0,1-.021,1.8L7.173,12.013H22.266a1.257,1.257,0,0,1,1.26,1.26v1.681a1.257,1.257,0,0,1-1.26,1.26H7.173L13.5,22.243A1.253,1.253,0,0,1,13.522,24.045Z" transform="translate(23.526 25.581) rotate(180)" fill="#fff" opacity="0.7"/>
-            </svg>
+            <div class="boutonaetb">
+                <p class="boutonaetbp">Toutes les actus & bons plan & bons plans</p>
+            </div>
+            <div class="barrecaroussel"><!--div pour les fleche et les barres-->
+                <svg class="flecheg" onclick="moveleft()" xmlns="http://www.w3.org/2000/svg" width="23.53" height="22.934" viewBox="0 0 23.53 22.934">
+                    <path id="Icon_awesome-arrow-left" data-name="Icon awesome-arrow-left" d="M13.522,24.045l-1.166,1.166a1.255,1.255,0,0,1-1.78,0L.367,15.007a1.255,1.255,0,0,1,0-1.78L10.576,3.018a1.255,1.255,0,0,1,1.78,0l1.166,1.166a1.262,1.262,0,0,1-.021,1.8L7.173,12.013H22.266a1.257,1.257,0,0,1,1.26,1.26v1.681a1.257,1.257,0,0,1-1.26,1.26H7.173L13.5,22.243A1.253,1.253,0,0,1,13.522,24.045Z" transform="translate(0.004 -2.647)" fill="#fff" opacity="0.7"/>
+                </svg>
+                <div class="lesbarres">
+                    <hr class="barre">
+                    <hr class="barreblanche" id="barreblancheid">
+                </div>
+                <svg class="fleched" onclick="moveright()" xmlns="http://www.w3.org/2000/svg" width="23.53" height="22.934" viewBox="0 0 23.53 22.934">
+                    <path id="Icon_awesome-arrow-left" data-name="Icon awesome-arrow-left" d="M13.522,24.045l-1.166,1.166a1.255,1.255,0,0,1-1.78,0L.367,15.007a1.255,1.255,0,0,1,0-1.78L10.576,3.018a1.255,1.255,0,0,1,1.78,0l1.166,1.166a1.262,1.262,0,0,1-.021,1.8L7.173,12.013H22.266a1.257,1.257,0,0,1,1.26,1.26v1.681a1.257,1.257,0,0,1-1.26,1.26H7.173L13.5,22.243A1.253,1.253,0,0,1,13.522,24.045Z" transform="translate(23.526 25.581) rotate(180)" fill="#fff" opacity="0.7"/>
+                </svg>
+            </div>
+        </div>
+        <div class="divlisteimage">
+        <ul class="listeimage" id="carousselimage">
+            <li><img src="img/shutterstock_1211521729@2x.png" alt=""><div class="txtimageaetb"><p class="dateaetb">16/03/2023</p><h3>Protegeons notre planete</h3><p class="hashtagaetb">#enmodeprévention</p></div></li>
+            <li><img src="img/shutterstock_1836563524@2x.png" alt=""><div class="txtimageaetb"><p class="dateaetb">16/03/2023</p><h3>Protegeons notre planete</h3><p class="hashtagaetb">#enmodeprévention</p></div></li>
+            <li><img src="img/shutterstock_1211521729@2x.png" alt=""><div class="txtimageaetb"><p class="dateaetb">16/03/2023</p><h3>Protegeons notre planete</h3><p class="hashtagaetb">#enmodeprévention</p></div></li>
+            <li><img src="img/shutterstock_1836563524@2x.png" alt=""><div class="txtimageaetb"><p class="dateaetb">16/03/2023</p><h3>Protegeons notre planete</h3><p class="hashtagaetb">#enmodeprévention</p></div></li>
+            <li><img src="img/shutterstock_1211521729@2x.png" alt=""><div class="txtimageaetb"><p class="dateaetb">16/03/2023</p><h3>Protegeons notre planete</h3><p class="hashtagaetb">#enmodeprévention</p></div></li>
+            <li><img src="img/shutterstock_1836563524@2x.png" alt=""><div class="txtimageaetb"><p class="dateaetb">16/03/2023</p><h3>Protegeons notre planete</h3><p class="hashtagaetb">#enmodeprévention</p></div></li>
+            <li><img src="img/shutterstock_1211521729@2x.png" alt=""><div class="txtimageaetb"><p class="dateaetb">16/03/2023</p><h3>Protegeons notre planete</h3><p class="hashtagaetb">#enmodeprévention</p></div></li>
+            <li><img src="img/shutterstock_1836563524@2x.png" alt=""><div class="txtimageaetb"><p class="dateaetb">16/03/2023</p><h3>Protegeons notre planete</h3><p class="hashtagaetb">#enmodeprévention</p></div></li>
+            <li><img src="img/shutterstock_1211521729@2x.png" alt=""><div class="txtimageaetb"><p class="dateaetb">16/03/2023</p><h3>Protegeons notre planete</h3><p class="hashtagaetb">#enmodeprévention</p></div></li>
+            <li><img src="img/shutterstock_1836563524@2x.png" alt=""><div class="txtimageaetb"><p class="dateaetb">16/03/2023</p><h3>Protegeons notre planete</h3><p class="hashtagaetb">#enmodeprévention</p></div></li>
+            <li><img src="img/shutterstock_1211521729@2x.png" alt=""><div class="txtimageaetb"><p class="dateaetb">16/03/2023</p><h3>Protegeons notre planete</h3><p class="hashtagaetb">#enmodeprévention</p></div></li>
+        </ul>
         </div>
     </div>
-    <div class="divlisteimage">
-    <ul class="listeimage" id="carousselimage">
-        <li><img src="img/shutterstock_1211521729@2x.png" alt=""></li>
-        <li><img src="img/shutterstock_1836563524@2x.png" alt=""></li>
-        <li><img src="img/shutterstock_1211521729@2x.png" alt=""></li>
-        <li><img src="img/shutterstock_1836563524@2x.png" alt=""></li>
-        <li><img src="img/shutterstock_1211521729@2x.png" alt=""></li>
-        <li><img src="img/shutterstock_1836563524@2x.png" alt=""></li>
-        <li><img src="img/shutterstock_1211521729@2x.png" alt=""></li>
-        <li><img src="img/shutterstock_1836563524@2x.png" alt=""></li>
-        <li><img src="img/shutterstock_1211521729@2x.png" alt=""></li>
-        <li><img src="img/shutterstock_1836563524@2x.png" alt=""></li>
-        <li><img src="img/shutterstock_1211521729@2x.png" alt=""></li>
-    </ul>
+    <div class="enviedeshopping">
+        <div class="grilleshop">
+            <div>
+                <h2 class="actustxt">Une envie de shopping </h2>
+                <h2 class="particulieretxt">particulière ?</h2>
+            </div>
+            <div class="divboutonshop">
+                <p class="boutonshop">Toutes les boutiques</p>
+            </div>  
+        </div>
+        <ul class="listeshop">
+            <li class="eltshop"><img src="img/Groupe 33.svg" alt=""> <p>Maison</p></li>
+            <li class="eltshop"><img src="img/Groupe 34.svg" alt=""> <p>Restauration</p></li>
+            <li class="eltshop"><img src="img/Groupe 37.svg" alt=""> <p>Mode & bijoux</p></li>
+            <li class="eltshop"><img src="img/Groupe 38.svg" alt=""> <p>Beauté & Santé</p></li>
+            <li class="eltshop"><img src="img/Groupe 43.svg" alt=""> <p>Culture & Loisirs</p></li>
+        </ul>
     </div>
+
+    
 <script src="global.js"></script>
 </body>
 </html>
