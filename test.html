@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Carrousel</title>
+    <style>
+        .carousel {
+            width: 100%;
+            overflow: hidden;
+        }
+        .carousel-images {
+            display: flex;
+            width: 1000%;
+            animation: slide 20s linear infinite;
+        }
+        .carousel-images img {
+            flex: 0 0 auto;
+            width: 10%;
+            height: auto;
+            margin-right: 10px;
+        }
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-90%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="carousel">
+        <div class="carousel-images">
+            <img src="pictures/pharmacie-logo.png" alt="Pharmacie">
+            <img src="pictures/bruit-dans-la-cuisine-logo.png" alt="Du Bruit dans la Cuisine">
+            <img src="pictures/fnac-logo.png" alt="Fnac">
+            <img src="pictures/hm-logo.png" alt="H&M">
+            <img src="pictures/mcdonalds-logo.png" alt="McDonald's">
+            <img src="pictures/sephora-logo.png" alt="Sephora">
+            <img src="pictures/marionnaud-logo.png" alt="Marionnaud">
+            <img src="pictures/normal-logo.png" alt="Normal">
+            <img src="pictures/jd-logo.png" alt="JD">
+        </div>
+    </section>
+</body>
+</html>
