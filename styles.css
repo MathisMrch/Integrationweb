@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Albert+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;700&display=swap');
 
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Albert Sans', sans-serif;
     background-color: #ffffff;
 }
 
@@ -27,21 +27,28 @@ body {
 
 .yellow-banner input[type="email"] {
     padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 300px;
-    margin-right: 10px;
+    font-size: 14px;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 250px;
+    background-color: #ffd700;
+}
+
+.yellow-banner input::placeholder {
+    color: black;
 }
 
 .yellow-banner button {
+    margin-left: -60px;
     padding: 10px 20px;
-    font-size: 16px;
-    background-color: black;
-    color: white;
+    background-color: transparent;
+    color: black;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
+}
+
+.yellow-banner img {
+    height: auto;
+    width: 15px;
 }
 
 .yellow-banner p {
@@ -54,11 +61,12 @@ body {
 .red-section {
     background-color: red;
     width: 100%;
-    height: 300px;
+    height: 500px;
     overflow: hidden;
 }
 
 .carousel {
+    padding-top: 250px;
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -133,27 +141,44 @@ body {
 /* Pied de page */
 footer {
     background-color: #ffffff;
-    padding: 50px 20px; 
+    padding: 40px 20px; 
     font-size: 14px;
-    color: #333;
+    color: #000000;
     border-top: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
 }
 
 .footer-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* grid de 3 colonnes */
-    gap: 20px; 
-    align-items: start; 
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .footer-logo h2 {
     font-size: 36px;
     margin: 0 0 10px;
+    font-weight: bold;
+}
+
+.footer-logo h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold; 
 }
 
 .footer-logo p {
     margin: 5px 0;
     line-height: 1.5;
+}
+
+.footer-logo img {
+    width: 20px; 
+    height: auto;
+    padding-right: 30px;   
 }
 
 .footer-logo button {
@@ -163,6 +188,7 @@ footer {
     border: 1px solid black;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 .footer-links h3 {
@@ -190,7 +216,7 @@ footer {
 
 .social-links {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .social-links a {
@@ -209,8 +235,7 @@ footer {
 }
 
 .social-links p {
-    margin-top: 8px;
-    margin-left: 7px;
+    margin-left: 10px;
     font-size: 20px;
     font-weight: bold;
     font-style: italic;
@@ -225,7 +250,6 @@ footer {
     font-size: 16px;
     margin-bottom: 10px;
     font-weight: bold;
-    text-transform: uppercase;
 }
 
 .newsletter form {
@@ -238,26 +262,35 @@ footer {
     padding: 10px;
     font-size: 14px;
     border: 1px solid black;
-    border-radius: 5px;
-    width: 200px;
+    border-radius: 20px;
+    width: 250px;
+}
+
+.newsletter input::placeholder {
+    color: #000000;
 }
 
 .newsletter button {
+    margin-left: -60px;
     padding: 10px 15px;
-    font-size: 14px;
-    background-color: black;
-    color: white;
+    background-color: transparent;
+    color: black;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
+}
+
+.newsletter img {
+    height: auto;
+    width: 15px;
 }
 
 .footer-bottom {
-    text-align: center;
-    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 720px;
+    margin-left: 310px;
+    font-size: 16px;
     margin-top: 30px;
-    color: #666;
-    border-top: 1px solid #ddd;
+    color: black;
     padding-top: 20px;
 }
 
@@ -268,7 +301,7 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
     .footer-container {
-        grid-template-columns: 1fr; /* Une seule colonne */
+        flex-direction: column;
         gap: 30px;
     }
 }
