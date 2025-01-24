@@ -7,94 +7,185 @@ body {
     background-color: #ffffff;
 }
 
-
+/* Section bannière jaune */
 .yellow-banner {
-    background-color: #ffd700;
+    position: relative;
     text-align: center;
-    padding: 20px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    z-index: 2;
+}
+
+.yellow-banner::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    bottom: -50%; /* Débordement vers le bas */
+    background-color: #f8df00;
+    border-radius: 15px;
+    z-index: -1; /* Place en arrière-plan de la bannière jaune */
 }
 
 .yellow-banner h1 {
-    font-size: 2em;
-    margin: 0 0 10px;
+    font-size: 2.5em; 
+    margin: 0;
+    font-weight: bold;
 }
 
 .yellow-banner form {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid black; /* Contour noir autour du formulaire */
+    border-radius: 30px; /* Arrondi pour correspondre à l'image */
+    padding: 5px 10px;
+    background-color: #f8df00;
 }
 
 .yellow-banner input[type="email"] {
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid black;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: transparent;
+    border: none; 
     border-radius: 20px;
     width: 250px;
-    background-color: #ffd700;
+    outline: none; /* Retrait des bords lors de la sélection */
 }
 
 .yellow-banner input::placeholder {
     color: black;
+    font-weight: normal;
 }
 
 .yellow-banner button {
-    margin-left: -60px;
-    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -5px;
+    padding: 10px 15px;
     background-color: transparent;
-    color: black;
     border: none;
 }
 
-.yellow-banner img {
-    height: auto;
-    width: 15px;
+.yellow-banner button img {
+    height: 20px; 
+    width: auto;
+    transform: translateX(0);
+    transition: transform 0.5s ease; 
+}
+
+.yellow-banner button img:hover {
+    transform: translateX(5px); 
+    transition: tr
+    nsform 0.5s ease; 
 }
 
 .yellow-banner p {
-    font-size: 12px;
-    color: #333;
-    margin-top: 10px;
+    font-size: 14px;
+    color: black;
+    margin-top: 15px;
+    max-width: 600px;
+    line-height: 1.5; /* Espacement entre les lignes */
+}
+
+.hashtag {
+    font-size: 36px; 
+    font-weight: bold; 
+    font-family: 'Albert Sans', sans-serif;
+    color: white; 
+    text-shadow: 
+        2px 2px 0px black,   /* Ombre à droite et en bas */
+        -2px -2px 0px black, /* Ombre à gauche et en haut */
+        2px -2px 0px black,  /* Ombre à droite et en haut */
+        -2px 2px 0px black;  /* Ombre à gauche et en bas */
+    font-style: italic; 
+    position: absolute;
+    top: 43%; 
+    left: 12.5%; 
+    z-index: 10; 
 }
 
 /* Section rouge */
 .red-section {
-    background-color: red;
+    background-color: #ec1c24;
     width: 100%;
-    height: 500px;
+    height: 450px;
     overflow: hidden;
 }
 
-.carousel {
-    padding-top: 250px;
-    width: 100%;
+.carousel, .carousel2 {
     overflow: hidden;
+    width: 100%;
     position: relative;
 }
 
-.carousel-images {
+.carousel-images, .carousel2-images {
     display: flex;
-    width: 100%; /* Largeur totale pour permettre le retour des images */
+    width: 160.9px;
 }
 
-.carousel-images img {
+.carousel-images .image-container,
+.carousel2-images .image-container {
     flex: 0 0 auto;
-    width: 10%; /* Chaque image prend 10% de la largeur totale */
+    position: relative;
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+.carousel-images .image-container img,
+.carousel2-images .image-container img {
+    width: 100%;
     height: auto;
-    margin-right: 20px; /* Espace entre les images */
-    animation: slide 20s linear infinite;
+    transition: transform 0.3s ease;
+}
+
+.carousel-images .image-container:hover img,
+.carousel2-images .image-container:hover img {
+    transform: scale(1.1);
+}
+
+/* Animation du carousel */
+.carousel-images .image-container {
+    animation: slide 60s linear infinite;
+}
+
+.carousel2-images .image-container {
+    animation: slide2 60s linear infinite;
 }
 
 @keyframes slide {
     0% {
-        transform: translateX(0);
+        transform: translateX(1000%);
     }
     100% {
-        transform: translateX(-90%); /* Déplace l'image de sa largeur totale */
+        transform: translateX(0%);
     }
 }
 
-  
+@keyframes slide2 {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-1000%);
+    }
+}
+
+.carousel {
+    padding-top: 10.5%;
+}
+
+.carousel2 {
+    position: absolute;
+    top: 55%;
+    padding-left: 1.5%;
+}
 
 /* Barre réseaux sociaux */
 .social-bar {
@@ -114,11 +205,13 @@ body {
     text-decoration: none;
     font-size: 14px;
     text-align: center;
-    transition: transform 0.2s ease, background-color 0.2s ease; /* Animation au survol */
+    transform: translateX(0);
+    transition: transform 0.5s ease; 
 }
 
 .social-bar a:hover {
-    transform: scale(1.1); /* Agrandissement au survol */
+    transform: translateX(5px);
+    transition: transform 0.5s ease; 
 }
 
 .vertical-text {
@@ -136,7 +229,6 @@ body {
     font-weight: bold;
     font-style: italic;
 }
-
 
 /* Pied de page */
 footer {
@@ -175,20 +267,24 @@ footer {
     line-height: 1.5;
 }
 
-.footer-logo img {
-    width: 20px; 
-    height: auto;
-    padding-right: 30px;   
-}
-
 .footer-logo button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-weight: bold;
     padding: 10px 20px;
     font-size: 14px;
     background-color: white;
     border: 1px solid black;
     border-radius: 5px;
-    cursor: pointer;
     margin-top: 10px;
+    gap: 10px; /* Espace entre l'image et le texte */
+}
+
+.footer-logo img {
+    width: 20px; 
+    height: auto;
 }
 
 .footer-links h3 {
@@ -232,8 +328,14 @@ footer {
 .social-links a img {
     width: 30px; 
     height: auto;
+    transform: translateX(0);
+    transition: transform 0.5s ease; 
 }
 
+.social-links a img:hover {
+    transform: translateY(-5px);
+    transition: transform 0.5s ease;  
+}
 .social-links p {
     margin-left: 10px;
     font-size: 20px;
@@ -276,6 +378,13 @@ footer {
     background-color: transparent;
     color: black;
     border: none;
+    transform: translateX(0);
+    transition: transform 0.5s ease; 
+}
+
+.newsletter button:hover {
+    transform: translateX(5px);
+    transition: transform 0.5s ease; 
 }
 
 .newsletter img {
