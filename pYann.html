@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>maquette</title>
-    <link rel="stylesheet" href="projet.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="carousel.css">
     
 </head>
 <body>
@@ -18,7 +19,7 @@
             </nav>
             <div class="status">
                 <span>OUVERT - 9:30 à 19:30</span>
-                <div class="boiteLoupe">
+                <div class="boiteLoupe" id="boiteLoupe">
                     <input type="text" class="cliqueLoupe" placeholder="Rechercher..." id="boiteRecherche" />
                     <button class="rechercheBouton" id="rechercheBtn">
                         <img src="/Images/Icon feather-search.svg" alt="Loupe" class="rechercheIcone">
@@ -32,38 +33,31 @@
         
     </header>
     
-    <div id="Carroussel">
-        <div id="image1"><img src="" alt=""></div>
-        <div id="image2"><img src="" alt=""></div>
-        <div id="image3"><img src="" alt=""></div>
+    <div class="box_carou_img">
+        <!-- Carrousel -->
+        <div class="boite boitegauche">
+            <div class="carousel">
+                <div class="slides">
+                    <img src="/Images/image1carousel.png" alt="Image 1" class="slide">
+                    <img src="/Images/image1carousel.png" alt="Image 2" class="slide">
+                    <img src="/Images/image1carousel.png" alt="Image 3" class="slide">
+                </div>
+            </div>
+        </div>
+
+        <!-- Informations Primark -->
+        <div class="boite boitedroite">
+            <div class="content">
+                <img src="/Images/imagePrimark.png" alt="Primark" class="image">
+                <h2 class="titre">PRIMARK</h2>
+                <p class="sous-titre">Mode & Déco</p>
+                <p class="evenement">Évènement<br>Primark ouvrira ses portes<br>le 21 Février 2023</p>
+                <button class="cta-bouton">En savoir plus</button>
+            </div>
+        </div>
     </div>
 
-    <div id="petits carrés">
-        <div id="carré1">
-            <h2>Objets trouvés</h2>
-            <img src="" alt="">
-            
-        </div>
-        <div id="carré2">
-            <h2>Accès</h2>
-            <img src="" alt="">
-            
-        </div>
-        <div id="carré3">
-            <h2>Plan du centre</h2>
-            <img src="" alt="">
-            
-        </div>
-        <div id="carré4">
-            <h2>Accessibilité</h2>
-            <img src="" alt="">
-            
-        </div>
-        <div id="carré5">
-            <h2>Plus de services</h2>
-            <img src="" alt="">
-            
-        </div>
+
 
 
     </div>
@@ -108,6 +102,7 @@
     <br>
     <br>
 
+    <script src="carousel.js"></script>
     <script src="header.js"></script>
     
 </body>

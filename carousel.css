@@ -1,0 +1,133 @@
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Permet un centrage vertical */
+}
+
+/* Conteneur principal */
+.box_carou_img {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    max-width: 1400px; /* Limite de largeur pour les grands écrans */
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Boîte gauche : carrousel */
+.boitegauche {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel {
+    width: 100%;
+    height: 40vh; /* Hauteur ajustée */
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 300%; /* Carrousel à 3 images */
+    height: 100%;
+}
+
+.slide {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Les images s'adaptent sans déformation */
+}
+
+/* Boîte droite : informations */
+.boitedroite {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.content {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Image Primark */
+.image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Titre et textes */
+.titre {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.sous-titre {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.evenement {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Bouton CTA */
+.cta-bouton {
+    background-color: #ff4f4f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.cta-bouton:hover {
+    background-color: #e62020;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .box_carou_img {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .boitegauche, .boitedroite {
+        width: 100%;
+    }
+
+    .carousel {
+        height: 30vh; /* Hauteur plus petite sur mobile */
+    }
+}
