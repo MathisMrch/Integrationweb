@@ -116,6 +116,7 @@ body{
     display: grid;
     grid-template-columns: 1fr 2fr ;
     grid-template-areas: "a b";
+    max-width: 100%;
 }
 
 .listeimage{
@@ -145,7 +146,10 @@ body{
 
 .listeimage li img {
     width: 400px;
+    height: 581.15px;
     display: block;
+    border-radius: 8px;
+    object-fit: cover;
 }
 
 .txtimageaetb {
@@ -224,7 +228,7 @@ body{
     justify-content: center; /* Centre les éléments dans la grille */
     margin-top: 70px; /* Supprime les marges externes */
     list-style-type: none; /* Supprime les puces */
-    padding: 20px;
+    
 }
 
 .eltshop{
@@ -306,9 +310,7 @@ body{
     font-weight: bold;
 }
 
-.imgicon-path{
-    width:106px ;
-}
+
 
 .elticon:hover{
     background-color: #FFFFFF;
@@ -318,6 +320,10 @@ body{
     .txticon {
         color: black;
         transition: all 0.3s ease-in-out;
+    }
+    .imgicon{
+        filter: invert(100%);
+        transition:all 0.3s ease-in-out ;
     }
 }
 
@@ -330,7 +336,19 @@ body{
     width: 100%; 
 }
 
-@media screen and (max-width: 768px) {
+.blacktxt {
+    color: black;
+}
+
+.yellowtxt {
+    color: yellow;
+}
+
+.bluetxt {
+    color: blue;
+}
+
+@media screen and (max-width: 808px) {
     .grille {
         display: grid;
         grid-template-rows: 1fr .4fr ;
@@ -347,5 +365,35 @@ body{
         grid-area: b;
     }
 
-    
+    .listeimage li img {
+        width: 220px;
+        height: 319.6px;
+        display: block;
+    }
+
+    .grilleshop {
+        display: grid;
+        grid-template-rows: 1fr .3fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "d"
+        "e";
+    }
+
+    .listeshop {
+        width: 553px;
+    }
+
+    .listeicon {
+        width: 553px;
+    }
+
+    .elticon {
+        max-width: 180px;
+        height: 180px;
+    }
+
+    .eltshop {
+        max-width: 180px;
+        height: 180px;
+    }
 }
