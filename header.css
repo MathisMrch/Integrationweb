@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;700&display=swap');
+
+
+body {
+    font-family: 'Albert Sans', sans-serif;
+}
+
 /* Base styles */
 * {
     margin: 0;
@@ -5,10 +12,7 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
+
 
 header {
     position: fixed;
@@ -22,6 +26,7 @@ header {
 }
 
 .premiereBarre {
+    padding-bottom: 2%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,17 +35,22 @@ header {
 }
 
 .logo {
-    font-size: 24px;
+    font-family: 'Albert Sans', sans-serif;
+    padding-left: 5%;
+    font-size: 300%;
     font-weight: bold;
     flex: 0.25 1 auto;
     text-align: left; /* S'assure que le logo est bien aligné à gauche */
 }
 
 .menu {
+    padding-left: 5%;
     display: flex;
-    gap: 15px; /* Réduit l'espace entre les éléments du menu */
+    gap: 10%; /* Réduit l'espace entre les éléments du menu */
     flex: 1 1 auto; /* Rend le menu plus flexible */
     justify-content: flex-start; /* Rapproche les textes du logo */
+    font-weight: bold;
+    font-size: 200%;
 }
 
 .menu a {
@@ -59,6 +69,7 @@ header {
     gap: 10px;
     flex: 1 1 auto;
     justify-content: flex-end;
+    padding-right: 5%;
 }
 
 .status span {
@@ -123,6 +134,7 @@ main {
 }
 
 .boiteLoupe {
+    padding-left: 2%;
     display: flex;
     align-items: center;
     position: relative;
