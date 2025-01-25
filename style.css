@@ -216,22 +216,20 @@ body{
 }
 
 .listeshop{
-    margin-top: 70px;
-    text-align: center;
-    display: flex;
-    float: left;
-    position: relative;
-    left: 0px;
-    flex-direction: row;
-    list-style-type: none;
-    transition: 0.5s;
-    gap: 56px;
-    margin-left: 160px;
-    padding-top: 20px;
+    display: grid; /* Utilisation de la grille pour les éléments */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Colonnes adaptatives */
+    gap: 30px; /* Espacement entre les éléments */
+    max-width: 1400px; /* Largeur maximale pour limiter l'espace horizontal */
+    width: 100%; /* Permet à la liste de s'adapter au conteneur */
+    justify-content: center; /* Centre les éléments dans la grille */
+    margin-top: 70px; /* Supprime les marges externes */
+    list-style-type: none; /* Supprime les puces */
+    padding: 20px;
 }
 
 .eltshop{
-    width: 211px;
+    width: 100%; /* Ajuste à la largeur définie par la grille */
+    max-width: 211px; /* Limite maximale pour les grands écrans */
     height: 211px;
     background-color: rgba(0, 0, 0, 0.5);
     border: 5px solid #FFFFFF;
@@ -257,4 +255,97 @@ body{
     background-color: red;
     transition: all 0.3s ease-in-out;
     transform: translateY(-20px);
+}
+
+.parashop {
+    font-family: Albert Sans;
+    color: #FFFFFF;
+    font-size: 30px;
+    text-align: center;
+    max-width: 1100px; /* Largeur maximale */
+    margin: 0 auto; /* Centre le texte horizontalement */
+}
+
+.listetxtshop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre les éléments verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+    gap: 20px;
+    width: 100%; 
+}
+
+.listeicon {
+    display: grid; /* Utilisation de la grille pour les éléments */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Colonnes adaptatives */
+    gap: 30px; /* Espacement entre les éléments */
+    max-width: 1400px; /* Largeur maximale pour limiter l'espace horizontal */
+    width: 100%; /* Permet à la liste de s'adapter au conteneur */
+    justify-content: center; /* Centre les éléments dans la grille */
+    margin-top: 70px; /* Supprime les marges externes */
+    list-style-type: none; /* Supprime les puces */
+    padding: 20px;
+}
+
+.elticon {
+    width: 100%; /* Ajuste à la largeur définie par la grille */
+    max-width: 211px; /* Limite maximale pour les grands écrans */
+    height: 211px;
+    border: 5px solid #FFFFFF;
+    border-radius: 20px;
+    display: grid;
+    grid-template-rows: 5fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.elticon p {
+    bottom: 70px;
+    color: white; /* Couleur du texte pour contraste */
+    font-family: Albert Sans, sans-serif;
+    font-weight: bold;
+}
+
+.imgicon-path{
+    width:106px ;
+}
+
+.elticon:hover{
+    background-color: #FFFFFF;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-20px);
+
+    .txticon {
+        color: black;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre les éléments verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+    gap: 20px;
+    width: 100%; 
+}
+
+@media screen and (max-width: 768px) {
+    .grille {
+        display: grid;
+        grid-template-rows: 1fr .4fr ;
+        grid-template-columns: 1fr;
+        grid-template-areas: "a"
+        "b";
+    }
+
+    .texteactetb {
+        grid-area: a;
+    }
+
+    .boutonaetb {
+        grid-area: b;
+    }
+
+    
 }
