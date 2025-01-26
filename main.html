@@ -4,8 +4,357 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="carousel.css">
+    <link rel="stylesheet" href="footer.css">
 </head>
 <body>
+
+    <!-- Header -->
+    <header>
+        <div class="premiereBarre">
+            <div class="logo">LOGO</div>
+            <nav class="menu">
+                <a href="#">Boutiques & Restaurants</a>
+                <a href="#">Actus & Bons plans</a>
+                <a href="#">Infos pratiques</a>
+            </nav>
+            <div class="status">
+                <span>OUVERT - 9:30 à 19:30</span>
+                <div class="boiteLoupe" id="boiteLoupe">
+                    <input type="text" class="cliqueLoupe" placeholder="Rechercher..." id="boiteRecherche" />
+                    <button class="rechercheBouton" id="rechercheBtn">
+                        <img src="/Images/Icon feather-search.svg" alt="Loupe" class="rechercheIcone">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="annonce">
+            Ouverture exceptionnelle le dimanche 12 février pour la Saint-Valentin
+        </div>
+    </header>
+
+    <div class="divbackground">
+    <div class="box_carou_img">
+        <!-- Carrousel -->
+        <div class="boite boitegauche">
+            <div class="carousel">
+                <div class="slides">
+                    <img src="/Images/image1carousel.png" alt="Image 1" class="slide">
+                    <img src="/Images/image1carousel.png" alt="Image 2" class="slide">
+                    <img src="/Images/image1carousel.png" alt="Image 3" class="slide">
+                </div>
+            </div>
+        </div>
+
+        <!-- Informations Primark -->
+        <div class="boite boitedroite">
+            <img src="/Images/imagePrimark.png" alt="Primark" class="imgPrimark">
+            <div class="contentBoiteDroite">
+                    <p class="titre">PRIMARK<sup class="indice">®</sup></p>
+                    <p class="sous-titre">Mode & Déco</p>
+                    <p class="evenement">Evènement</p>
+                    <div class="txtsurImg">
+                        <p class="txt1">Primark ouvrira</p>
+                        <p class="txt2">ses portes</p>
+                        <p class="txt3">le 21 Février 2023</p>
+                    </div>
+                    <button class="bouton">En savoir plus</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="icon">
+        <ul class="listeicon">
+            <li class="elticon"><img class="imgicon" src="img/Groupe 77.svg" alt=""> <p class="txticon">Maison</p></li>
+            <li class="elticon"><img class="imgicon" src="img/Groupe 79.svg" alt=""> <p class="txticon">Restauration</p></li>
+            <li class="elticon"><img class="imgicon" src="img/Groupe 83.svg" alt=""> <p class="txticon">Mode & bijoux</p></li>
+            <li class="elticon"><img class="imgicon" src="img/Groupe 87.svg" alt=""> <p class="txticon">Beauté & Santé</p></li>
+            <li class="elticon"><img class="imgicon" src="img/Icon feather-map-pin.svg" alt=""> <p class="txticon">Culture & Loisirs</p></li>
+        </ul>
+    </div>
+
+    <!-- Carrousel -->
+    <div class="actusetbonsplan">
+        <div class="grille">
+            <div class="texteactetb"> <!--div Actus & bons plans texte-->
+                <h2 class="actustxt">Actus & </h2><h2 class="bonsplanstxt">bons plans</h2>
+            </div>
+            <div class="boutonaetb">
+                <p class="boutonaetbp">Toutes les actus & bons plan & bons plans</p>
+            </div>
+            <div class="barrecaroussel"><!--div pour les fleche et les barres-->
+                <svg class="flecheg" onclick="moveleft()" xmlns="http://www.w3.org/2000/svg" width="23.53" height="22.934" viewBox="0 0 23.53 22.934">
+                    <path id="Icon_awesome-arrow-left" data-name="Icon awesome-arrow-left" d="M13.522,24.045l-1.166,1.166a1.255,1.255,0,0,1-1.78,0L.367,15.007a1.255,1.255,0,0,1,0-1.78L10.576,3.018a1.255,1.255,0,0,1,1.78,0l1.166,1.166a1.262,1.262,0,0,1-.021,1.8L7.173,12.013H22.266a1.257,1.257,0,0,1,1.26,1.26v1.681a1.257,1.257,0,0,1-1.26,1.26H7.173L13.5,22.243A1.253,1.253,0,0,1,13.522,24.045Z" transform="translate(0.004 -2.647)" fill="#fff" opacity="0.7"/>
+                </svg>
+                <div class="lesbarres">
+                    <hr class="barre">
+                    <hr class="barreblanche" id="barreblancheid">
+                </div>
+                <svg class="fleched" onclick="moveright()" xmlns="http://www.w3.org/2000/svg" width="23.53" height="22.934" viewBox="0 0 23.53 22.934">
+                    <path id="Icon_awesome-arrow-left" data-name="Icon awesome-arrow-left" d="M13.522,24.045l-1.166,1.166a1.255,1.255,0,0,1-1.78,0L.367,15.007a1.255,1.255,0,0,1,0-1.78L10.576,3.018a1.255,1.255,0,0,1,1.78,0l1.166,1.166a1.262,1.262,0,0,1-.021,1.8L7.173,12.013H22.266a1.257,1.257,0,0,1,1.26,1.26v1.681a1.257,1.257,0,0,1-1.26,1.26H7.173L13.5,22.243A1.253,1.253,0,0,1,13.522,24.045Z" transform="translate(23.526 25.581) rotate(180)" fill="#fff" opacity="0.7"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="divlisteimage">
+        <ul class="listeimage" id="carousselimage">
+            <li>
+                <img src="img/shutterstock_1211521729@2x.png" alt="">
+                <div class="txtimageaetb">
+                    <p class="dateaetb">16/03/2023</p>
+                    <h3>Protegeons notre planete</h3>
+                    <p class="hashtagaetb">#enmodeprévention</p>
+                </div>
+            </li>
+            <li>
+                <img src="img/shutterstock_1836563524@2x.png" alt="">
+                <div class="txtimageaetb">
+                    <p class="dateaetb">16/03/2023</p>
+                    <h3>Découvrez nos cadeaux!</h3>
+                    <p class="hashtagaetb">#enmodeprévention</p>
+                </div>
+            </li>
+            <li>
+                <img src="img/Etudiant bio cuisine.webp" alt="">
+                <div class="txtimageaetb">
+                    <p class="dateaetb">16/03/2023</p>
+                    <h3 class="blacktxt">Préparez votre visite</h3>
+                    <p class="hashtagaetb">#enmodeprévention</p>
+                </div>
+            </li>
+            <li>
+                <img src="img/Soldes_hiver_2025_banniere_mobile_1.png" alt="">
+                <div class="txtimageaetb">
+                    <p class="dateaetb" class="blacktxt">16/03/2023</p>
+                    <h3 class="blacktxt">Des soldes à bas prix</h3>
+                    <p class="hashtagaetb">#enmodeprévention</p>
+                </div>
+            </li>
+            <li>
+                <img src="img/shutterstock_1211521729@2x.png" alt="">
+                <div class="txtimageaetb">
+                    <p class="dateaetb">16/03/2023</p>
+                    <h3>Protegeons notre planete</h3>
+                    <p class="hashtagaetb">#enmode<span class="yellowtxt">prévention</span></p>
+                </div>
+            </li>
+            <li>
+                <img src="img/primark.jpg" alt="">
+                <div class="txtimageaetb">
+                    <p class="dateaetb" class="blacktxt">16/03/2023</p>
+                    <h3 class="blacktxt">PRIMARK ouvre avec un nouveau logo</h3>
+                    <p class="blacktxt" class="hashtagaetb">#enmode<span class="bluetxt">prévention</span></p>
+                </div>
+            </li>
+            <li>
+                <img src="img/cadeau.jpg" alt="">
+                <div class="txtimageaetb">
+                    <p class="dateaetb">16/03/2023</p>
+                    <h3>Decouvrez les nouveau cadeaux</h3>
+                    <p class="hashtagaetb" class="blacktxt">#enmodeprévention</p>
+                </div>
+            </li>
+            <li>
+                <img src="img/shopping.jpg" alt="">
+                <div class="txtimageaetb">
+                    <p class="dateaetb">16/03/2023</p>
+                    <h3>Achetez et decouvrez</h3>
+                    <p class="hashtagaetb" class="blacktxt">#enmodeprévention</p>
+                </div>
+            </li>
+            <li>
+                <img src="img/autrecadeau.jpg" alt="">
+                <div class="txtimageaetb">
+                    <p class="dateaetb">16/03/2023</p>
+                    <h3>Encore plus de cadeau !</h3>
+                    <p class="hashtagaetb">#enmodeprévention</p>
+                </div>
+            </li>
+            <li>
+                <img src="img/argent.jpg" alt="">
+                <div class="txtimageaetb">
+                    <p class="dateaetb">16/03/2023</p>
+                    <h3>Dépensez encore plus !</h3>
+                    <p class="hashtagaetb">#enmodeprévention</p>
+                </div>
+            </li>
+            <li>
+                <img src="img/shutterstock_1211521729@2x.png" alt="">
+                <div class="txtimageaetb">
+                    <p class="dateaetb">16/03/2023</p>
+                    <h3>Protegeons notre planete</h3>
+                    <p class="hashtagaetb">#enmodeprévention</p>
+                </div>
+            </li>
+        </ul>
+        </div>
+    </div>
+    </div>
+
+    <!-- Carré -->
+    <div class="enviedeshopping">
+        <div class="grilleshop">
+            <div>
+                <h2 class="actustxt">Une envie de shopping </h2>
+                <h2 class="particulieretxt">particulière ?</h2>
+            </div>
+            <div class="divboutonshop">
+                <p class="boutonshop">Toutes les boutiques</p>
+            </div>  
+        </div>
+    </div>
+        <div class="listetxtshop">
+            <ul class="listeshop">
+                <li class="eltshop"><img src="img/Groupe 33.svg" alt=""> <p>Maison</p></li>
+                <li class="eltshop"><img src="img/Groupe 34.svg" alt=""> <p>Restauration</p></li>
+                <li class="eltshop"><img src="img/Groupe 37.svg" alt=""> <p>Mode & bijoux</p></li>
+                <li class="eltshop"><img src="img/Groupe 38.svg" alt=""> <p>Beauté & Santé</p></li>
+                <li class="eltshop"><img src="img/Groupe 43.svg" alt=""> <p>Culture & Loisirs</p></li>
+            </ul>
+            <p class="parashop"><strong>Plus de 40 boutiques</strong> de mode, beauté et déco pour dénicher les dernières tendances et se faire plaisir ensemble.</p>
+        </div>
     
+    <!-- Début footer -->
+    <section class="yellow-banner">
+        <div class="hashtag">#enmodetips</div>
+        <div class="yellow-banner-inner">
+            <h1>Infos & bons plans</h1>
+            <form>
+                <input type="email" placeholder="Votre email" required>
+                <button type="submit"><img src="pictures/arrow-left.svg" alt="Flèche gauche"></button>
+            </form>
+            <p>En renseignant votre adresse e-mail, vous acceptez de recevoir des informations de la part des enseignes et vous prenez connaissance de notre Politique de confidentialité.</p>
+        </div>
+    </section>    
+    <section class="red-section">
+        <div class="carousellucas">
+            <div class="carousel-images">
+                <div class="image-container">
+                    <img src="pictures/pharmacie-logo.png" alt="Pharmacie">
+                </div>
+                <div class="image-container">
+                    <img src="pictures/bruit-dans-la-cuisine-logo.png" alt="Du Bruit dans la Cuisine">
+                </div>
+                <div class="image-container">
+                    <img src="pictures/fnac-logo.png" alt="Fnac">
+                </div>
+                <div class="image-container">
+                    <img src="pictures/hm-logo.png" alt="H&M">
+                </div>
+                <div class="image-container">
+                    <img src="pictures/mcdonalds-logo.png" alt="McDonald's">
+                </div>
+                <div class="image-container">
+                    <img src="pictures/sephora-logo.png" alt="Sephora">
+                </div>
+                <div class="image-container">
+                    <img src="pictures/marionnaud-logo.png" alt="Marionnaud">
+                </div>
+                <div class="image-container">
+                    <img src="pictures/normal-logo.png" alt="Normal">
+                </div>
+                <div class="image-container">
+                    <img src="pictures/jd-logo.png" alt="JD">
+                </div>
+            </div>
+        </div>
+        <div class="carousel2">
+            <div class="carousel2-images">
+                <div class="image-container">
+                    <img src="pictures/pharmacie-logo.png" alt="Pharmacie">
+                </div>
+                <div class="image-container">
+                    <img src="pictures/bruit-dans-la-cuisine-logo.png" alt="Du Bruit dans la Cuisine">
+                </div>
+                <div class="image-container">
+                    <img src="pictures/fnac-logo.png" alt="Fnac">
+                </div>
+                <div class="image-container">
+                    <img src="pictures/hm-logo.png" alt="H&M">
+                </div>
+                <div class="image-container">
+                    <img src="pictures/mcdonalds-logo.png" alt="McDonald's">
+                </div>
+                <div class="image-container">
+                    <img src="pictures/sephora-logo.png" alt="Sephora">
+                </div>
+                <div class="image-container">
+                    <img src="pictures/marionnaud-logo.png" alt="Marionnaud">
+                </div>
+                <div class="image-container">
+                    <img src="pictures/normal-logo.png" alt="Normal">
+                </div>
+                <div class="image-container">
+                    <img src="pictures/jd-logo.png" alt="JD">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Barre réseau sociaux -->
+    <div class="social-bar">
+        <div class="vertical-text">#enmodepartage</div>
+        <a href="#"><img src="pictures/facebook-logo.svg" alt="Facebook"></a>
+        <a href="#"><img src="pictures/twitter-logo.svg" alt="Twitter"></a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <h2>LOGO</h2>
+            <h3>Nom du logo</h3>
+            <p>Toute l'adresse est là ou pas...</p>
+            <p>
+                <button><img src="pictures/smartphone-logo.svg" alt="Téléphone"> 01 02 03 04 05</button>
+                <button><img src="pictures/mail-logo.svg" alt="Mail"> Par mail</button>
+            </p>
+        </div>
+        <div class="footer-links">
+            <h3>Nom logo et vous</h3>
+            <ul>
+                <li>Notre histoire</li>
+                <li>Accès / Horaires</li>
+                <li>Boutiques & Restaurants</li>
+                <li>Actus & bons plans</li>
+                <li>Infos pratiques</li>
+                <li>Plans des centres</li>
+                <li>Emploi</li>
+            </ul>
+            <h3>Louer</h3>
+            <ul>
+                <li>Un emplacement temporaire</li>
+                <li>Un local</li>
+            </ul>
+        </div>
+        <div class="footer-info">
+            <div class="social-links">
+                <a href="#"><img src="pictures/facebook-logo.svg" alt="Facebook"></a>
+                <a href="#"><img src="pictures/twitter-logo.svg" alt="Twitter"></a>
+                <p>#enmode<span style="color:red;">partage</span></p>
+            </div>
+            <div class="newsletter">
+                <h3>Infos & bons plans</h3>
+                <form>
+                    <input type="email" placeholder="Votre email" required>
+                    <button type="submit"><img src="pictures/arrow-left.svg" alt="Flèche gauche"></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>2023 Logo. Tous droits réservés.</p>
+        <p>Mentions légales – Politique de confidentialité</p>
+    </div>
+    </footer>
+    
+
+    
+<script src="global.js"></script>
+<script src="carousel.js"></script>
+<script src="header.js"></script>
 </body>
 </html>

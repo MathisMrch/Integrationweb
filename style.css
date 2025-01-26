@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Judson:wght@700&display=swap');
+
+*{
+    margin: 0;
+}
+
+body{
+    background-image: url("Images/magasin.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.divbackground{
+    background-color: #ec1c24;
+    padding-bottom: 10%;
+}
+
+.actustxt{
+    font-family: Albert Sans;
+    /* UI Properties */
+    text-align: left;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    font-size: 70px;
+}
+
+.bonsplanstxt{
+    font-family: Albert Sans;
+    /* UI Properties */
+    text-align: left;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    font-size: 70px;
+    margin-left: 10%;
+    color: transparent;
+    -webkit-text-stroke-width: 3px; /*faire les contour*/
+    -webkit-text-stroke-color: white;/*couleur des contours*/
+}
+
+.barre{
+    width: 100%;
+    border: none;
+    height: 5px;
+    background-color: grey;
+    margin-top: 10px;
+    border-radius: 2px;
+    position: absolute;
+}
+
+.flecheg{
+    width: 30%;
+    margin-left: 50%;
+    margin-right: 50%;
+}
+
+.fleched {
+    width: 30%;
+    margin-left: 20%;
+    margin-right: 50%;
+}
+
+.barrecaroussel{
+    grid-area: b;
+    margin-top: 20%;
+    display: grid;
+    grid-template-columns: 1fr 7fr 1fr;
+    width: 85%;
+}
+
+.texteactetb{
+    grid-area: a;
+    margin-top: 80px;
+}
+
+.boutonaetb{
+    grid-area: b;
+    text-align: end;
+    width: 80%;
+    margin-top: 10%;
+}
+
+.boutonaetbp {
+    font-family: Albert Sans, bold;
+    font-weight: 700;
+    color: red;
+    background-color: #FFFFFF;
+    padding: 10px;
+    display: inline;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.boutonaetbp:hover{
+    padding: 15px;
+    margin-right: 0;
+    transition: 0.05s ease-in-out;
+}
+
+.lesbarres {
+    position: relative; /* Nécessaire pour le positionnement absolu des enfants */
+    width: 100%; /* Ajuste la largeur du conteneur */
+    height: 5px; /* Définit une hauteur pour le conteneur */
+}
+
+.barreblanche {
+    width: 0%;
+    border: none;
+    height: 5px;
+    background-color: #FFFFFF;
+    border-radius: 2px;
+    position: absolute;
+    z-index: 1;
+    margin-top: 10px;
+    transition: width 0.3s ease;
+}
+
+.grille{
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: 1fr 2fr ;
+    grid-template-areas: "a b";
+    max-width: 100%;
+}
+
+.listeimage{
+    margin-top: 70px;
+    text-align: center;
+    display: flex;
+    float: left;
+    position: relative;
+    left: 0px;
+    flex-direction: row;
+    list-style-type: none;
+    transition: 0.5s;
+    gap: 30px;
+    transition: 0.5s;
+    left: -430px;
+}
+
+.listeimage li {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.divlisteimage {
+    overflow: hidden;
+}
+
+.listeimage li img {
+    width: 400px;
+    height: 581.15px;
+    display: block;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.txtimageaetb {
+    position: absolute; /* Permet de superposer le texte */
+    text-align: left;
+    bottom: 70px;
+    color: white; /* Couleur du texte pour contraste */
+    font-family: Albert Sans, sans-serif;
+    left: 25px;
+}
+
+.dateaetb{
+    margin-bottom: 20px;
+}
+
+.txtimageaetb h3{
+    font-size: 2rem;
+}
+
+.hashtagaetb{
+    margin-top: 50px;
+    font-family: Albert Sans, sans-serif;
+    font-weight: bold;
+}
+
+.particulieretxt {
+    font-family: Albert Sans;
+    /* UI Properties */
+    text-align: left;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    font-size: 70px;
+    color: transparent;
+    -webkit-text-stroke-width: 3px; /*faire les contour*/
+    -webkit-text-stroke-color: white;/*couleur des contours*/
+}
+
+.enviedeshopping {
+    margin-left: 80px;
+}
+
+.boutonshop {
+    font-family: Albert Sans, bold;
+    font-weight: 700;
+    color: red;
+    background-color: #FFFFFF;
+    padding: 10px;
+    display: inline;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.boutonshop:hover{
+    padding: 15px;
+    transition: 0.05s ease-in-out;
+    margin-left: 0;
+}
+
+.divboutonshop {
+    margin-top: 80px;
+}
+
+.grilleshop {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.listeshop{
+    display: grid; /* Utilisation de la grille pour les éléments */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Colonnes adaptatives */
+    gap: 30px; /* Espacement entre les éléments */
+    max-width: 1400px; /* Largeur maximale pour limiter l'espace horizontal */
+    width: 90%; /* Permet à la liste de s'adapter au conteneur */
+    justify-content: center; /* Centre les éléments dans la grille */
+    margin-top: 70px; /* Supprime les marges externes */
+    list-style-type: none; /* Supprime les puces */
+    
+}
+
+.eltshop{
+    width: 100%; /* Ajuste à la largeur définie par la grille */
+    max-width: 211px; /* Limite maximale pour les grands écrans */
+    height: 211px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 5px solid #FFFFFF;
+    border-radius: 20px;
+    display: grid;
+    grid-template-rows: 5fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.listeshop li p{
+    bottom: 70px;
+    color: white; /* Couleur du texte pour contraste */
+    font-family: Albert Sans, sans-serif;
+    font-weight: bold;
+}
+
+.listeshop li img{
+    width:106px ;
+}
+
+.eltshop:hover{
+    background-color: red;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-20px);
+}
+
+.parashop {
+    font-family: Albert Sans;
+    color: #FFFFFF;
+    font-size: 30px;
+    text-align: center;
+    max-width: 1100px; /* Largeur maximale */
+    margin: 0 auto; /* Centre le texte horizontalement */
+}
+
+.listetxtshop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre les éléments verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+    gap: 20px;
+    width: 100%; 
+}
+
+.listeicon {
+    display: grid; /* Utilisation de la grille pour les éléments */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Colonnes adaptatives */
+    gap: 30px; /* Espacement entre les éléments */
+    max-width: 1400px; /* Largeur maximale pour limiter l'espace horizontal */
+    width: 90%; /* Permet à la liste de s'adapter au conteneur */
+    justify-content: center; /* Centre les éléments dans la grille */
+    margin-top: 70px; /* Supprime les marges externes */
+    list-style-type: none; /* Supprime les puces */
+    padding: 20px;
+}
+
+.elticon {
+    width: 100%; /* Ajuste à la largeur définie par la grille */
+    max-width: 211px; /* Limite maximale pour les grands écrans */
+    height: 211px;
+    border: 5px solid #FFFFFF;
+    border-radius: 20px;
+    display: grid;
+    grid-template-rows: 5fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.elticon p {
+    bottom: 70px;
+    color: white; /* Couleur du texte pour contraste */
+    font-family: Albert Sans, sans-serif;
+    font-weight: bold;
+}
+
+
+
+.elticon:hover{
+    background-color: #FFFFFF;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-20px);
+
+    .txticon {
+        color: black;
+        transition: all 0.3s ease-in-out;
+    }
+    .imgicon{
+        filter: invert(100%);
+        transition:all 0.3s ease-in-out ;
+    }
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre les éléments verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+    gap: 20px;
+    width: 100%; 
+}
+
+.blacktxt {
+    color: black;
+}
+
+.yellowtxt {
+    color: yellow;
+}
+
+.bluetxt {
+    color: blue;
+}
+
+@media screen and (max-width: 808px) {
+    .grille {
+        display: grid;
+        grid-template-rows: 1fr .4fr ;
+        grid-template-columns: 1fr;
+        grid-template-areas: "a"
+        "b";
+    }
+
+    .texteactetb {
+        grid-area: a;
+    }
+
+    .boutonaetb {
+        grid-area: b;
+    }
+
+    .listeimage li img {
+        width: 220px;
+        height: 319.6px;
+        display: block;
+    }
+
+    .grilleshop {
+        display: grid;
+        grid-template-rows: 1fr .3fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "d"
+        "e";
+    }
+
+    .listeshop {
+        width: 553px;
+    }
+
+    .listeicon {
+        width: 553px;
+    }
+
+    .elticon {
+        max-width: 180px;
+        height: 180px;
+    }
+
+    .eltshop {
+        max-width: 180px;
+        height: 180px;
+    }
+
+    
+}
