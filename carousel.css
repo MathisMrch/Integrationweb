@@ -33,6 +33,7 @@ body {
 
 .carousel {
     width: 100%;
+    height: 100%;
     position: relative;
     display: flex;
     overflow: hidden;
@@ -46,11 +47,34 @@ body {
 }
 
 .slide {
-    flex: 1;
+    flex: 0 0 100%;
     width: 100%;
-    height: 100%;
-    object-fit:cover; /* Les images s'adaptent sans déformation */
+    height: 100%; /* Les images s'adaptent sans déformation */
 }
+
+.points {
+    position: absolute;
+    bottom: 10px;
+    left: 95%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.point {
+    width: 12px;
+    height: 12px;
+    background-color: lightgrey;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.point.actif {
+    background-color: grey; /* Couleur différente pour le point actif */
+}
+
+
 
 /* Boîte droite : informations */
 .boitedroite {
@@ -68,9 +92,8 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
     z-index: 1;
+    object-fit: cover;
 }
 
 .boitedroite .contentBoiteDroite {
@@ -142,12 +165,14 @@ body {
     .box_carou_img {
         flex-direction: column;
         align-items: center;
-        gap: 20px;
+        gap: 5%;
         margin-top: 15%;
     }
 
     .boitegauche, .boitedroite {
         width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     .carousel {
