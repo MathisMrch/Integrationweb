@@ -1,6 +1,6 @@
 // Carousel
 
-
+// permet de selectionner pour les slides ainsi que les points du 1er carousel
 const slides = document.querySelector('.slides');
 const points = document.querySelectorAll('.point');
 let currentIndex = 0;
@@ -84,7 +84,7 @@ function moveleft(){
 
 // Header 
 
-// Récupérer les éléments
+// Récupérer les éléments pour la loupe
 const rechercheBtn = document.getElementById('rechercheBtn');
 const boiteLoupe = document.getElementById('boiteLoupe');
 const cliqueLoupe = document.getElementById('boiteRecherche');
