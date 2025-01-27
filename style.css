@@ -7,7 +7,7 @@
 body{
     background-image: url("Images/magasin.jpg");
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: fixed;/*arriere plan fixe*/
     background-size: cover;
 }
 
@@ -66,7 +66,7 @@ body{
     grid-area: b;
     margin-top: 20%;
     display: grid;
-    grid-template-columns: 1fr 7fr 1fr;
+    grid-template-columns: 1fr 7fr 1fr; /*création d'une grille en trois partie*/
     width: 85%;
 }
 
@@ -90,7 +90,7 @@ body{
     padding: 10px;
     display: inline;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: pointer; /*Permet d'afficher un curseur cliquable*/
     margin-right: 5px;
 }
 
@@ -120,9 +120,9 @@ body{
 
 .grille{
     margin-left: 10%;
-    display: grid;
+    display: grid; /*Création d'une grille*/
     grid-template-columns: 1fr 2fr ;
-    grid-template-areas: "a b";
+    grid-template-areas: "a b"; /* Nommage des zones pour la grille */
     max-width: 100%;
 }
 
@@ -143,12 +143,12 @@ body{
 
 .listeimage li {
     position: relative;
-    display: inline-block;
+    display: inline-block; /* Transforme l'élement en élement en ligne */
     cursor: pointer;
 }
 
 .divlisteimage {
-    overflow: hidden;
+    overflow: hidden; /* N'affiche pas les images sortants de la page */
 }
 
 .listeimage li img {
@@ -319,11 +319,12 @@ body{
 
 
 
-.elticon:hover{
+.elticon:hover{ /* Css lors du survol */
     background-color: #FFFFFF;
     transition: all 0.3s ease-in-out;
     transform: translateY(-20px);
 
+    /* Entraine le changements d'autres élements lors du survol de elticon */
     .txticon {
         color: black;
         transition: all 0.3s ease-in-out;
@@ -355,9 +356,10 @@ body{
     color: blue;
 }
 
-@media screen and (max-width: 808px) {
+/* Responsive pour un écran inférieur ou égale à 808px */
+@media screen and (max-width: 808px) { 
     .grille {
-        display: grid;
+        display: grid; /* Grille pour une nouvelle disposition */
         grid-template-rows: 1fr .4fr ;
         grid-template-columns: 1fr;
         grid-template-areas: "a"
@@ -772,6 +774,7 @@ body {
     animation: slide2 60s linear infinite;
 }
 
+/* Animation du defilement des icon en bas de page */
 @keyframes slide {
     0% {
         transform: translateX(1000%);
