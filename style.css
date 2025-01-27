@@ -1305,7 +1305,8 @@ body {
 }
 
 .boitedroite .bouton {
-    margin-right: 63%;
+    display: flex;
+    right: 15px;
     background-color: #e60000;
     color: white;
     border: none;
@@ -1316,14 +1317,22 @@ body {
     margin-top: 10px
 }
 
+.boitedroite .bouton:hover {
+    border: #e60000 1px solid;
+ }
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .box_carou_img {
         flex-direction: column;
         align-items: center;
-        gap: 5%;
-        margin-top: 15%;
+        gap: 20%;
+        margin-top: 35%;
+    }
+
+    .boitegauche {
+        margin-bottom: 15px;
     }
 
     .boitegauche, .boitedroite {
