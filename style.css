@@ -746,7 +746,7 @@ body {
 
 .slider-marque{
     position: relative;
-    padding-bottom: 15%;
+    padding-bottom: 10%;
     background-color: #E82723;
     width: 100%;
     margin-left: auto;
@@ -1072,17 +1072,6 @@ footer {
         width: 100%;
     }
 
-    .carousel-images, .carousel2-images {
-        display: flex;
-        gap: 10px;
-        padding: 10px;
-    }
-
-    .carousel-images .image-container,
-    .carousel2-images .image-container {
-        margin-right: 10px;
-    }
-
     .social-bar {
         left: 5px;
         transform: translateY(0);
@@ -1120,16 +1109,6 @@ footer {
         font-size: 1.8em;
     }
 
-    .carousel-images .image-container img,
-    .carousel2-images .image-container img {
-        width: 80%;
-        margin: 0 auto;
-    }
-
-    .carousel-images, .carousel2-images {
-        flex-direction: column;
-    }
-
     .footer-container {
         flex-direction: column;
         align-items: center;
@@ -1163,12 +1142,6 @@ footer {
 
     .yellow-banner input[type="email"] {
         width: 100%;
-    }
-
-    .carousel-images .image-container,
-    .carousel2-images .image-container {
-        width: 100%;
-        margin-right: 0;
     }
 
     .footer-links h3 {
