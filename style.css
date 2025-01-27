@@ -5,7 +5,7 @@
 }
 
 body{
-    background-image: url("Images/magasin.jpg");
+    background-image: url("img/magasin.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;/*arriere plan fixe*/
     background-size: cover;
